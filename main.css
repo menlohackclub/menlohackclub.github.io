@@ -4,6 +4,7 @@ body {
 
 img {
 	display: block;
+	vertical-align: middle;
 	margin: auto;
 }
 
