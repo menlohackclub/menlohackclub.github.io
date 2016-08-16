@@ -1,5 +1,11 @@
-nav {
+#nav {
 	bottom: 0px;
 	background-color: rgb(0, 84, 151);
-	height: 100px;
+	height: 30px;
+}
+
+#nav * {
+	text-decoration: none;
+	color: rgb(252, 176, 64);
+	text-shadow: 2px 2px rgb(200, 150, 50);
 }
