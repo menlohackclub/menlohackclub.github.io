@@ -1,8 +1,9 @@
 body {
-	background-color: black;
+	background-color: #fefefe;
 }
 
 img {
+	display: block;
 	margin: auto;
 }
 
