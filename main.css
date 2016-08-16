@@ -7,5 +7,7 @@
 #nav * {
 	text-decoration: none;
 	color: rgb(252, 176, 64);
-	text-shadow: 2px 2px rgb(200, 150, 50);
+	text-shadow: 1px 1px rgb(200, 150, 50);
+	font-family: sans-serif;
+	font-size: 2em;
 }
