@@ -3,7 +3,8 @@ body {
 }
 
 img {
-	display: absolute;
+	display: block;
+	position: absolute;
 	margin-top: 50%;
 	margin: auto;
 }
