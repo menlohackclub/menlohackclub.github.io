@@ -2,6 +2,10 @@ body {
 	background-color: black;
 }
 
+img {
+	justify-content: center;
+}
+
 #nav {
 	position: absolute;
 	bottom: 0px;
