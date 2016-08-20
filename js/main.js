@@ -1,2 +1,2 @@
-let fadeIconIn = () => $('#icon').hide().fadeIn(2000);
+let fadeIconIn = () => $('#icon').hide().fadeIn(2500);
 fadeIconIn();
