@@ -12,7 +12,7 @@ body {
 }
 
 img {
-	max-width: 400px;
+	max-width: 300px;
 	margin-top: 50px;
 }
 
@@ -47,4 +47,10 @@ h1, h3 {
 #nav div *:hover {
 	text-decoration: underline;
 	text-decoration-color: rgb(252, 176, 64);
+}
+
+#signin * {
+	margin: 30px;
+	background-color: rgb(252, 176, 64);
+	font-size: 1.2em;
 }
