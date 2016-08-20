@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Menlo Hack Club</title>
+
+        <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+
+        <link href="main.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+
+    </head>
+    <body>
+        <script 
+            src="http://bit.ly/twilio-basic-v7"
+            sid="ACf0b6b8965d96aaae85a497897bcb475f"
+            token="c7857cde401d1e2585aff93924221f22">
+        </script>
+
+        <script src="main.js"></script>
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Menlo Hack Club</h1>
+                <div class =  "row">
+                    <p>Code | Create | Hack</p>
+                    <br><br><br><br>
+                    <a href="https://shipped.hackclub.com">Hack Club Projects</a><br><a href="https://bit.ly/MenloHackClub">Sign Up</a>
+                </div>
+            </div>
+        </div> 
+
+        <div class="form">
+            <span>Phone number (xxx-xxx-xxxx):</span> <input class="input" id="phonenumber" type="text" name="phonenumber"><br><br>
+            <span>Message:</span> <input class="input" id="message" type="text" name="message"><br><br>
+            <button class="input" onclick="textMe()">Text Me</button>
+            <button class="input" onclick="callMe()">Call Me</button>
+            <button class="input" onclick="playPanda()">Play Panda</button>
+            <br><br>
+            <button class="input" onclick="reloadPage()">Reload</button>
+        </div>
+        <script>
+
+            function textMe() {
+                var phonenumber = document.getElementById("phonenumber").value;
+                var message = document.getElementById("message").value;
+
+                Twilio.sendMessage(phonenumber, message);
+                window.alert("Sending text saying \"" + message + "\" to " + phonenumber);
+            }
+
+            function callMe() {
+                var phonenumber = document.getElementById("phonenumber").value;
+                var message = document.getElementById("message").value;
+
+                Twilio.callAndSay(phonenumber, message);
+                window.alert("Calling " + phonenumber + " to say \"" + message + "\"");
+            }
+
+            function playPanda() {
+                var phonenumber = document.getElementById("phonenumber").value;
+                Twilio.callAndPlay(phonenumber, "http://www.laikhtewari.com/assets/Panda.mp3");
+                window.alert("Calling " + phonenumber + " to play Panda");
+            }
+
+            function reloadPage() {
+                location.reload();
+            }
+        </script>
+    </body>
+</html>

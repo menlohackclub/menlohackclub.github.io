@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Shift';
+  font-style: normal;
+  font-weight: normal;
+  src: url("http://s3.amazonaws.com/codecademy-content/courses/ltp/fonts/shift.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Shift';
+  font-style: normal;
+  font-weight: bold;
+  src: url("http://s3.amazonaws.com/codecademy-content/courses/ltp/fonts/shift-bold.woff") format("woff");
+}
+
+.row {
+    text-align: center;
+}
+
+.jumbotron {
+  background-image: url("MenloHackClubPic.png");
+  height: 550px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+  display: inline;
+}
+
+.jumbotron .container h1 {
+  color: #005BAC;
+  font-size: 100px;  
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  display: inline;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.jumbotron .container p {
+  display: inline;
+  color: #FFAE38;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.jumbotron .container a {
+  display: inline;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 25;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.form {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+}
+
