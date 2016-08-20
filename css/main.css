@@ -1,6 +1,6 @@
 body {
 	background-color: #d3d3d3;
-	font-family: sans-serif;
+	font-family: Menlo, sans-serif;
 }
 
 #icon {
@@ -14,6 +14,10 @@ body {
 img {
 	max-width: 400px;
 	margin-top: 50px;
+}
+
+h1, h3 {
+	color: rgb(0, 79, 153);
 }
 
 #icon * {
@@ -45,6 +49,6 @@ img {
 	text-decoration-color: rgb(252, 176, 64);
 }
 
-#desc {
-
+span {
+	text-align: center;
 }
