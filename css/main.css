@@ -3,12 +3,6 @@ body {
 	font-family: Menlo, sans-serif;
 }
 
-@media screen and (max-width: 786px) {
-	h1, h3, a {
-		font-size: 0.5em;
-	}
-}
-
 #icon {
 	display: block;
 	margin-left: auto;
@@ -59,5 +53,16 @@ h1, h4 {
 	margin: 3%;
 	background-color: rgb(252, 176, 64);
 	font-size: 1.2em;
+}
+
+@media screen and (max-width: 786px) {
+	h1, h3, a {
+		font-size: 0.5em !important;
+	}
+
+	#icon {
+		max-width: 75%;
+		min-width: 50%;
+	}
 }
 
