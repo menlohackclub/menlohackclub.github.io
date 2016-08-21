@@ -6,11 +6,10 @@ let indx = 0;
 setInterval(() => {
 	if (indx === photoArray.length - 1) indx = 0;
 	else indx++;
-	slideshowImage.setAttribute('src', '/images/' + photoArray[indx]);
+	slideshowImage.setAttribute('src', 'images/' + photoArray[indx]);
 }, 5000);
-
-let shiftLeft = () => slideshowImage.setAttribute('src', '/images/' + photoArray[--indx]);
-let shiftRight = () => slideshowImage.setAttribute('src', '/images/' + photoArray[++indx]);
+let shiftLeft = () => slideshowImage.setAttribute('src', 'images/' + photoArray[--indx]);
+let shiftRight = () => slideshowImage.setAttribute('src', 'images/' + photoArray[++indx]);
 $('#leftOverlay').bind('click', shiftLeft);
 $('#rightOverlay').bind('click', shiftRight);
 
