@@ -56,8 +56,13 @@ h1, h4 {
 }
 
 @media screen and (max-width: 786px) {
-	h1, h3, a {
+	h1, h4, a {
 		font-size: 0.5em !important;
+	}
+
+	#signin {
+		max-width: 30%;
+		max-height: 10%;
 	}
 
 	#icon {
