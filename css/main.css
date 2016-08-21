@@ -3,6 +3,12 @@ body {
 	font-family: Menlo, sans-serif;
 }
 
+@media screen and (max-width: 786px) {
+	h1, h3, a {
+		font-size: 0.5em;
+	}
+}
+
 #icon {
 	display: block;
 	margin-left: auto;
