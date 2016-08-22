@@ -1,6 +1,7 @@
 body {
 	background-color: #d3d3d3;
 	font-family: Menlo, sans-serif;
+	min-width: 800px;
 }
 
 #icon {
@@ -53,21 +54,5 @@ h1, h4 {
 	margin: 3%;
 	background-color: rgb(252, 176, 64);
 	font-size: 1.2em;
-}
-
-@media screen and (max-width: 786px) {
-	h1, h4, a {
-		font-size: 1em !important;
-	}
-
-	#signin {
-		max-width: 30%;
-		max-height: 10%;
-	}
-
-	#icon {
-		max-width: 75%;
-		min-width: 50%;
-	}
 }
 
