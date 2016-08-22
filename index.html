@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8"/>
 	<title>Menlo Hack Club</title>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -13,18 +12,18 @@
 <body>
 	<div id="main">
 		<div class="row" id="icon">
-			<img src="images/IconOnly.png">
-			<h1>Menlo Hack Club</h1>
-			<h4>Code | Create | Hack</h3>
+			<img id="icon-img" src="images/IconOnly.png">
+			<h1 class="title">Menlo Hack Club</h1>
+			<h4 class="title">Code | Create | Hack</h3>
 			<div id="signin">
 				<a href="SignUp" class="btn-large">Sign Up</a>
 				<a href="LogIn" class="btn-large">Log In</a>
 			</div>
 		</div>
 		<div class="row" id="nav">
-			<div class="col s4 valign-wrapper"><span class="center-block valign">About Us</span></div>
-			<div class="col s4 valign-wrapper"><span class="center-block valign">Projects</span></div>
-			<div class="col s4 valign-wrapper"><span class="center-block valign">Contact</span></div>
+			<div class="col s4 valign-wrapper"><a href="AboutUs" class="center-block valign">About Us</a></div>
+			<div class="col s4 valign-wrapper"><a href="Projects" class="center-block valign">Projects</a></div>
+			<div class="col s4 valign-wrapper"><a href="Contact" class="center-block valign">Contact</a></div>
 		</div>
 	</div>
 
@@ -43,5 +42,9 @@
 		<div id="test4" class="col s12">Test 4</div>
 	</div> -->
 	<script src="js/main.js"></script>
+
+	<!-- <div id="small-screen" class="valign-wrapper" style="display: none;">
+		<h1 class="valign center-block title">Website not available on small screens, mobile app coming soon</h1>
+	</div> -->
 </body>
 </html>
