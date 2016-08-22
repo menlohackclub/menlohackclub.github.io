@@ -57,7 +57,7 @@ h1, h4 {
 
 @media screen and (max-width: 786px) {
 	h1, h4, a {
-		font-size: 0.5em !important;
+		font-size: 1em !important;
 	}
 
 	#signin {
