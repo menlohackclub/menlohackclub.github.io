@@ -104,3 +104,11 @@ body {
 	margin: 50px !important;
 }
 
+#contact-form {
+	max-width: 1000px;
+}
+
+#other-contact .row {
+	display: flex;
+	flex-direction: row;
+}
