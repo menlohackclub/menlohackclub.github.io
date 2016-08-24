@@ -108,6 +108,6 @@ body {
 	flex-direction: row;
 }
 
-.card p {
+.card-reveal p {
 	font-size: 2.5em;
 }
