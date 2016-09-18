@@ -8,7 +8,7 @@ let login = () => {
 	console.log("hello, world");
 }
 
-document.getElementById("test").addEventListener("click", login());
+document.getElementById("test").addEventListener("click", login;
 
 
 // let slideshowImage = document.getElementById('slide');
