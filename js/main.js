@@ -7,7 +7,7 @@ let login = () => {
 	firebase.auth().signInWithPopup(provider).then(function(result) {
 		let now = Date(Date.now).toDateString();
 		firebase.database().ref('users/' + result.user.uid).push({"login":now});
-		firebase.database().ref('users/' + result.user.uid + "/email").set({result.user.email});
+		firebase.database().ref('users/' + result.user.uid + "/email").set(result.user.email);
 		console.dir(result);
 	}).catch(function(error) {
 		alert(error);
