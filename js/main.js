@@ -4,7 +4,7 @@ let ref = new Firebase("https://menlo-hack-club.firebaseio.com");
 
 let login = () => {
 	let now = Date.now();
-	ref.set({now});
+	ref.push({now});
 }
 
 document.getElementById("test").addEventListener("click", login);
