@@ -6,7 +6,7 @@ function login() {
 		let reqObj = JSON.parse(req.responseText);
 		console.dir(reqObj);
 	}
-	req.open("GET", "https://github.com/login?client_id=721ca0f795c77e6a7416&return_to=https%253A%252F%252Fmenlohackclub.xyz/Demo", true);
+	req.open("GET", "https://github.com/login/oauth/authorize?scope=user:email&client_id=721ca0f795c77e6a7416&return_to=https%253A%252F%252Fmenlohackclub.xyz/Demo", true);
 	req.send();
 }
 
