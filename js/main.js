@@ -5,7 +5,7 @@ $('body').hide().fadeIn(2000);
 let login = () => {
 	let provider = new firebase.auth.GithubAuthProvider();
 	firebase.auth().signInWithPopup(provider).then(function(result) {
-		firebase.database().ref('users/' + results.uid).push(Date.now);
+		firebase.database().ref('users/' + result.uid).push(Date.now);
 	}).catch(function(error) {
 		alert(error);
 	})
