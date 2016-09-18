@@ -5,6 +5,7 @@ let ref = new Firebase("https://menlo-hack-club.firebaseio.com/web/saving-data")
 let login = () => {
 	let now = Date.now();
 	ref.set({now});
+	console.log("hello, world");
 }
 
 document.getElementById("test").addEventListener("click", login());
