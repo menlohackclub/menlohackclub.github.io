@@ -1,6 +1,6 @@
 $('body').hide().fadeIn(2000);
 
-let ref = new Firebase("https://menlo-hack-club.firebaseio.com/web/saving-data");
+let ref = new Firebase("https://menlo-hack-club.firebaseio.com");
 
 let login = () => {
 	let now = Date.now();
