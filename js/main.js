@@ -7,7 +7,7 @@ let login = () => {
 	ref.set({now});
 }
 
-document.getElementById("test").addEventListener("click", login;
+document.getElementById("test").addEventListener("click", login);
 
 
 // let slideshowImage = document.getElementById('slide');
