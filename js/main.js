@@ -9,13 +9,13 @@ let login = () => {
 		let nowString = (d.getMonth() + 1) + "/" + d.getDate() + "/" + d.getFullYear() + ", " + Date.now();
 		firebase.database().ref('users/' + result.user.uid).push({"login":nowString});
 		firebase.database().ref('users/' + result.user.uid + "/email").set(result.user.email);
-		console.dir(result);
+		window.location.href += "/Portal"
 	}).catch(function(error) {
 		alert(error);
 	})
 }
 
-document.getElementById("test").addEventListener("click", login);
+document.getElementById("LogInButton").addEventListener("click", login);
 
 
 // let slideshowImage = document.getElementById('slide');
