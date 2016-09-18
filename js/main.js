@@ -6,7 +6,7 @@ let login = () => {
 	let provider = new firebase.auth.GithubAuthProvider();
 	firebase.auth().signInWithPopup(provider).then(function(result) {
 		let now = Date.now();
-		firebase.database().ref('users/' + result.user.uid).push(now);
+		firebase.database().ref('users/' + result.user.uid).push({"login":now});
 		console.dir(result);
 	}).catch(function(error) {
 		alert(error);
