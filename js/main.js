@@ -3,7 +3,8 @@ $('body').hide().fadeIn(2000);
 function login() {
 	let req = new XMLHttpRequest();
 	req.onload = () => {
-		let reqObj = JSON.parse(req.responseText)
+		let reqObj = JSON.parse(req.responseText);
+		console.dir(reqObj);
 	}
 	req.open("GET", "https://github.com/login/oauth/authorize?client_id=721ca0f795c77e6a7416", true);
 	req.send();
