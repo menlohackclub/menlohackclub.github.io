@@ -3,8 +3,13 @@ $('body').hide().fadeIn(2000);
 let ref = new Firebase("https://menlo-hack-club.firebaseio.com");
 
 let login = () => {
-	let now = Date.now();
-	ref.push({now});
+	ref.authWithOAuthPopup("github", function(error, authData) {
+  if (error) {
+    console.log("Login Failed!", error);
+  } else {
+    console.log("Authenticated successfully with payload:", authData);
+  }
+}, {remember: "sessionOnly"});
 }
 
 document.getElementById("test").addEventListener("click", login);
