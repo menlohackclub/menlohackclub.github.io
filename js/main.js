@@ -1,12 +1,13 @@
 $('body').hide().fadeIn(2000);
 
 let logIn = () => {
-	let req = new XMLHttpRequest();
-	req.onload = () => {
-		let reqObj = JSON.parse(req.responseText)
-	}
-	req.open("GET", "https://github.com/login/oauth/authorize?clientId=721ca0f795c77e6a7416", true);
-	req.send();
+	// let req = new XMLHttpRequest();
+	// req.onload = () => {
+	// 	let reqObj = JSON.parse(req.responseText)
+	// }
+	// req.open("GET", "https://github.com/login/oauth/authorize?clientId=721ca0f795c77e6a7416", true);
+	// req.send();
+	window.location.href = "https://github.com/login/oauth/authorize?clientId=721ca0f795c77e6a7416";
 }
 
 document.getElementById("LogInButton").addEventListener("click", logIn());
