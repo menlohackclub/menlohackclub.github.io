@@ -1,15 +1,14 @@
 $('body').hide().fadeIn(2000);
 
-let ref = new Firebase("https://menlo-hack-club.firebaseio.com");
+
 
 let login = () => {
-	ref.authWithOAuthPopup("github", function(error, authData) {
-  if (error) {
-    console.log("Login Failed!", error);
-  } else {
-    console.log("Authenticated successfully with payload:", authData);
-  }
-}, {remember: "sessionOnly"});
+	let provider = new firebase.auth.GithubAuthProvider();
+	firebase.auth().signInWithPopup(provider).then(function(result) {
+		console.dir(result);
+	}).catch(function(error) {
+		alert(error);
+	})
 }
 
 document.getElementById("test").addEventListener("click", login);
