@@ -1,6 +1,6 @@
 $('body').hide().fadeIn(2000);
 
-let logIn = () => {
+function login() {
 	// let req = new XMLHttpRequest();
 	// req.onload = () => {
 	// 	let reqObj = JSON.parse(req.responseText)
