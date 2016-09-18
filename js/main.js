@@ -1,17 +1,5 @@
 $('body').hide().fadeIn(2000);
 
-function login() {
-	let req = new XMLHttpRequest();
-	req.onload = () => {
-		let reqObj = JSON.parse(req.responseText);
-		console.dir(reqObj);
-	}
-	req.open("GET", "https://github.com/login/oauth/authorize?scope=user:email&client_id=721ca0f795c77e6a7416&return_to=https%253A%252F%252Fmenlohackclub.xyz/Demo", true);
-	req.send();
-}
-
-document.getElementById("LogInButton").addEventListener("click", login());
-
 // let slideshowImage = document.getElementById('slide');
 // let photoArray = ['a.png', 'b.png', 'c.png'];
 // let indx = 0;
