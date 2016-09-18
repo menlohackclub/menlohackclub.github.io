@@ -9,7 +9,7 @@ function login() {
 	req.send();
 }
 
-document.getElementById("LogInButton").addEventListener("click", logIn());
+document.getElementById("LogInButton").addEventListener("click", login());
 
 // let slideshowImage = document.getElementById('slide');
 // let photoArray = ['a.png', 'b.png', 'c.png'];
