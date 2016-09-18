@@ -1,5 +1,16 @@
 $('body').hide().fadeIn(2000);
 
+let logIn = () => {
+	let req = new XMLHttpRequest();
+	req.onload = () => {
+		let reqObj = JSON.parse(req.responseText)
+	}
+	req.open("GET", "https://github.com/login/oauth/authorize?clientId=721ca0f795c77e6a7416", true);
+	req.send();
+}
+
+document.getElementById("LogInButton").addEventListener("click", logIn());
+
 // let slideshowImage = document.getElementById('slide');
 // let photoArray = ['a.png', 'b.png', 'c.png'];
 // let indx = 0;
