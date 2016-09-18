@@ -5,9 +5,9 @@ $('body').hide().fadeIn(2000);
 let login = () => {
 	let provider = new firebase.auth.GithubAuthProvider();
 	firebase.auth().signInWithPopup(provider).then(function(result) {
-		let now = Date.now();
+		let now = Date.now().toDateString();
 		firebase.database().ref('users/' + result.user.uid).push({"login":now});
-		firebase.database().ref('users/' + result.user.uid + "/email").set({"email":result.user.email});
+		firebase.database().ref('users/' + result.user.uid + "/email").set({result.user.email});
 		console.dir(result);
 	}).catch(function(error) {
 		alert(error);
