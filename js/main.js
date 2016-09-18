@@ -1,10 +1,10 @@
 $('body').hide().fadeIn(2000);
 
-let firebase = new Firebase("https://menlo-hack-club.firebaseio.com/web/data");
+let ref = new Firebase("https://menlo-hack-club.firebaseio.com/web/data");
 
 let login = () => {
 	let now = Date.now();
-	firebase.set({now});
+	ref.set({now});
 }
 
 document.getElementById("test").addEventListener("click", login());
