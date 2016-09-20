@@ -35,7 +35,7 @@
             <span>Message:</span> <input class="input" id="message" type="text" name="message"><br><br>
             <button class="input" onclick="textMe()">Text Me</button>
             <button class="input" onclick="callMe()">Call Me</button>
-            <button class="input" onclick="playPanda()">Play Panda</button>
+            <button class="input" onclick="playSong()">Play Song</button>
             <br><br>
             <button class="input" onclick="reloadPage()">Reload</button>
         </div>
@@ -57,10 +57,10 @@
                 window.alert("Calling " + phonenumber + " to say \"" + message + "\"");
             }
 
-            function playPanda() {
+            function playPplaySonganda() {
                 var phonenumber = document.getElementById("phonenumber").value;
                 Twilio.callAndPlay(phonenumber, "http://www.laikhtewari.com/assets/Panda.mp3");
-                window.alert("Calling " + phonenumber + " to play Panda");
+                window.alert("Calling " + phonenumber + " to play song");
             }
 
             function reloadPage() {
