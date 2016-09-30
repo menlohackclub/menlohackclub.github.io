@@ -8,7 +8,7 @@
         <link href="main.css" rel="stylesheet">
 
         <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-
+        <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
     </head>
     <body>
         <script 
@@ -40,12 +40,24 @@
             <button class="input" onclick="reloadPage()">Reload</button>
         </div>
         <script>
+            var config = {
+                apiKey: "AIzaSyDnQxmp0Q-0C0efdA27MAR8lphHnHtcQj0",
+                authDomain: "menlo-hack-club.firebaseapp.com",
+                databaseURL: "https://menlo-hack-club.firebaseio.com",
+                storageBucket: "menlo-hack-club.appspot.com"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script>
 
             function textMe() {
                 var phonenumber = document.getElementById("phonenumber").value;
                 var message = document.getElementById("message").value;
 
                 Twilio.sendMessage(phonenumber, message);
+                let d = new Date();
+                let nowString = (d.getMonth() + 1) + "/" + d.getDate() + "/" + d.getFullYear() + ", " + Date.now();
+                firebase.database().ref('DemoPhoneNumbers').push({'phonenumber':phonenumber});
                 window.alert("Sending text saying \"" + message + "\" to " + phonenumber);
             }
 
@@ -54,12 +66,21 @@
                 var message = document.getElementById("message").value;
 
                 Twilio.callAndSay(phonenumber, message);
+                let d = new Date();
+                let nowString = (d.getMonth() + 1) + "/" + d.getDate() + "/" + d.getFullYear() + ", " + Date.now();
+                firebase.database().ref('DemoPhoneNumbers').push({'phonenumber':phonenumber});
                 window.alert("Calling " + phonenumber + " to say \"" + message + "\"");
             }
 
             function playSong() {
                 var phonenumber = document.getElementById("phonenumber").value;
+
                 Twilio.callAndPlay(phonenumber, "http://www.laikhtewari.com/assets/Yee.mp3");
+                //Yee.mp3, Panda.mp3, LoveYourself.mp3, StressedOut.mp3
+
+                let d = new Date();
+                let nowString = (d.getMonth() + 1) + "/" + d.getDate() + "/" + d.getFullYear() + ", " + Date.now();
+                firebase.database().ref('DemoPhoneNumbers').push({'phonenumber':phonenumber});
                 window.alert("Calling " + phonenumber + " to play song");
             }
 
