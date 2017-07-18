@@ -89,7 +89,7 @@
 		let database = firebase.database();
 		let commentsRef = database.ref('comments/');
 		commentsRef.on('value', function(snapshot) {
-			console.dir(snapshot);
+			console.dir(snapshot.val());
 		});
 
 		let submit = document.getElementById('submit');
